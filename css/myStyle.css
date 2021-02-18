@@ -1,0 +1,136 @@
+body {
+    font-size: 20;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.header-navbar {
+    position: sticky;
+    display: flex;
+    flex-direction:row;
+    justify-content: center;
+    top: 0;
+    width: 100%;
+    height: 50px;
+    background-color:rgb(236, 229, 229);
+}
+
+.header-navbar a {
+    padding: 15px 20px;
+    text-align: center;
+    display: block;
+    text-decoration:none;
+}
+
+.navbar-item:hover {
+    background-color: rgb(212, 226, 191);
+}
+
+.content {
+    width: 100%;
+    text-align: center;
+    padding-bottom: 2000px;
+}
+
+.header-img {
+    width:100%;
+    z-index: 0;
+}
+
+.contact-img {
+    height: 200px;
+    width: 400px;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 1fr 4fr 1fr 4fr 4fr 4fr;
+    grid-template-areas: 
+        "wk-header"
+        "wk-0"
+        "pl-header"
+        "pl-0"
+        "pl-1"
+        "pl-2"
+    ;
+    height: 100%;
+    width: 100%;
+} 
+
+@media screen and (min-width: 1000px) {
+    .container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 2fr 1fr 4fr;
+        grid-template-areas: 
+            "wk-header wk-header wk-header"
+            "wk-0 wk-0 wk-0"
+            "pl-header pl-header pl-header"
+            "pl-0 pl-1 pl-2"
+        ;
+        height: 100%;
+        width: 100%;
+    }            
+}
+
+.container > div {
+    border: dotted 1px rgb(176, 176, 192);
+    padding: 5px 10px;
+}
+
+.wk-header {
+    grid-area: wk-header;
+    text-align: center;
+}
+
+.wk-0 {
+    display: flex;
+    grid-area: wk-0;
+    justify-content: center;
+    align-items: center;
+}
+
+.pl-header {
+    grid-area: pl-header;
+    text-align: center;
+}
+
+.pl-0 {
+    grid-area: pl-0;
+    padding-bottom: 100px;
+}
+
+.pl-1 {
+    grid-area: pl-1;
+    padding-bottom: 100px;
+}
+
+.pl-2 {
+    grid-area: pl-2;
+    padding-bottom: 100px;
+}
+
+.contact-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 10px;
+    width: 100%;
+}
+.contact-box {
+    height: 200px;
+    width: 200px;
+    margin-top: 100px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+li:first-child {
+    display: block;
+    font-size: 1.17em;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    margin-left: 0;
+    margin-right: 0;
+    font-weight: bold;
+}
